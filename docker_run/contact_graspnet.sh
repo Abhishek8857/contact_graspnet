@@ -21,10 +21,11 @@ docker run \
     -e "ACCEPT_EULA=Y" \
     -e "PRIVACY_CONSENT=Y" \
     -e DISPLAY=$DISPLAY \
-      -e NVIDIA_DRIVER_CAPABILITIES=all \
+    -e NVIDIA_DRIVER_CAPABILITIES=all \
     -e QT_X11_NO_MITSHM=1 \
+    --name contact_graspnet \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
-	-v "$HOME/.Xauthority:/root/.Xauthority:rw" \
+    -v "$HOME/.Xauthority:/root/.Xauthority:rw" \
     -v $PARENT_DIR:/root/workspaces/:rw \
     -v /dev:/dev \
     -v "$REPO_DIR:/contact_graspnet:rw" \
